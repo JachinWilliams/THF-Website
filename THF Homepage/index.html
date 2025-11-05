@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>WIP for THF</title>
+        
+        <!-- Importing Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+        
+        <!-- Material icons -->
+       <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:FILL@1" rel="stylesheet" />
+       
+        <!-- Set Up -->
+        <style>
+           
+           * {
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+           }
+           
+           :root {
+               --tinted-white: rgb(250, 245, 245);
+               --dark-red: rgb(161, 27, 27);
+               --medium-red: rgb(252, 111, 111);
+               --light-gray: rgb(200, 200, 200);
+               --darker-gray: rgb(100, 100, 100);
+               --light-red: rgb(255, 220, 194);
+           }
+           
+           body {
+               background-color: var(--tinted-white);
+               font-family: "Roboto", sans-serif;
+               font-size: 18px;
+           }
+           
+           h1,
+           h2,
+           h3,
+           h4,
+           p {
+               color:black;
+               margin:10px;
+           }
+
+           em {
+                color: var(--darker-gray);
+           }
+           
+           a {
+               color: var(--dark-red);
+               font-weight: bold;
+               text-decoration: none;
+           }
+           a:hover {
+            text-decoration: underline;
+           }
+           
+           button {
+               padding: 12px 20px;
+               border:none;
+               border-radius: 30px;
+               font-weight: bold;
+               transition: filter 1s ease;
+           }
+           button:hover {
+               cursor: pointer;
+               filter:brightness(0.9);
+           }
+           .btn1 {
+               background-color: var(--dark-red);
+               color:white;
+           }
+           .btn2 {
+               background-color:white;
+               color:black;
+               border:solid 1px var(--light-gray);
+           }
+           
+           .btn3 {
+               background-color: var(--light-red);
+               color:var(--dark-red);
+           }
+           
+           .logo {
+               mix-blend-mode: multiply;
+               aspect-ratio: 1 / 1;
+           }
+           
+           .content-section {
+               padding:5%;
+           }
+           
+           .section-img {
+               max-width:200px;
+               border-radius:20px;
+           }
+
+           .scrolled.u {
+                animation: fade-up 750ms ease;
+           }
+           .scrolled.l {
+                animation: fade-left 750ms ease;
+           }
+           .scrolled.r {
+                animation: fade-right 750ms ease;
+           }
+           
+
+           @keyframes fade-in {
+                from {
+                    opacity: 0;
+                }
+                to{
+                    opacity: 1;
+                }
+           }
+
+           @keyframes fade-down {
+                from {
+                    opacity: 0;
+                    transform: translateY(-10%);
+                }
+                to{
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+           }
+
+           @keyframes fade-up {
+                from {
+                    opacity: 0;
+                    transform: translateY(10%);
+                }
+                to{
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+           }
+
+           @keyframes fade-left {
+                from {
+                    opacity: 0;
+                    transform: translateX(50%);
+                }
+                to{
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+           }
+
+           @keyframes fade-right {
+                from {
+                    opacity: 0;
+                    transform: translateX(-50%);
+                }
+                to{
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+           }
+           
+        </style>
+       
+        <!-- Header and Footer -->
+        <style>
+        
+            .header {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                
+                background-color:white;
+                
+                height: 10vh;
+            }
+            
+            .head-img {
+                height:90%;
+            }
+            
+            .nav-link, .foot-links {
+                color:black;
+                margin: 5px;
+                font-weight: normal;
+                
+            }
+            .nav-link:hover {
+                text-decoration: none;
+            }
+            
+            .nav-link.active {
+                font-weight: bold;
+            }
+            
+            
+            .footer {
+                
+                background:white;
+                
+                padding:20px;
+                
+            }
+            
+            .foot-upper {
+                display:flex;
+                justify-content:space-around;
+                border-bottom:2px solid black;
+                padding-bottom:20px;
+            }
+            
+            .foot-img {
+                width: 20vw;
+                height:20vw;
+            }
+            
+            
+        </style>
+        
+        <!-- Home(0) -->
+        <style>
+        
+            .hero {
+                height:100vh;
+                width:100vw;
+            }
+            
+            .main-hero-text {
+                width:100%;
+                height:50%;
+                
+                padding:15%;
+                
+                text-align:center ;
+
+                animation: fade-down 1.5s ease;
+            }
+            
+            .hero-bottom {
+                display:flex;
+                align-items: flex-end;
+                height:50%;
+                width:100%;
+            }
+            
+            .hero-img {
+                background-image: url(https://upload.wikimedia.org/wikipedia/commons/3/39/C_Hello_World_Program.png);
+                background-size: cover;
+                
+                width:20%;
+                height: 100%;
+                
+                border-radius:12px;
+
+                animation: fade-up 1.5s ease;
+                animation-delay: 0.5s;
+                animation-fill-mode: backwards;
+
+            }
+            
+            .hero-card {
+                margin: 2%;
+                border-radius:12px;
+                max-width:25%;
+                text-align:center;
+            }
+            
+            #stat1 {
+                background: var(--dark-red);
+                height: 70%;
+                animation: fade-up 1.5s ease;
+                animation-delay: 1s;
+                animation-fill-mode: backwards;
+
+            }
+            
+            #stat2 {
+                background: white;
+                border: 1px solid var(--light-gray);
+                height: 70%;
+                animation: fade-up 1.5s ease;
+                animation-delay: 1.5s;
+                animation-fill-mode: backwards;
+
+            }
+            
+            #stat3 {
+                background: var(--light-red);
+                height:100%;
+                animation: fade-up 1.5s ease;
+                animation-delay: 2s;
+                animation-fill-mode: backwards;
+
+            }
+            
+            .disclaimer {
+                text-align:center;
+                padding:20px;
+                border-radius:20px;
+                border:dashed 3px var(--dark-red);
+            }
+            
+            
+        </style>
+
+        <!-- Teams(2) -->
+        <style>
+
+            .team-container {
+                display: flex;
+                gap: 20px;
+                width: 80vw;
+                margin: 20px 0;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                scroll-padding: 0 20px;
+                scroll-behavior: smooth;
+                padding: 20px;
+            }
+
+            .team-container::-webkit-scrollbar {
+                display: none; /* Chrome, Safari, Opera */
+            }
+
+
+
+            .member-card {
+                display: 0 0 auto;
+                scroll-snap-align: start;
+                min-width: 70vw;
+                position: relative;
+                background-color: var(--tinted-white);
+                box-shadow: 0 0 10px 1px var(--light-gray);
+                
+            }
+
+            .member-avatar {
+                max-width: 50px;
+                padding: 1%;
+                border-radius: 50%;
+                border: solid var(--light-gray) 2px;
+
+                position: absolute;
+                right: 5%;
+                top:9%;
+            }
+
+            .member-subtext {
+                color: var(--darker-gray);
+            }
+
+        </style>
+
+        <!-- Projects(3) -->
+        <style>
+
+            .pj-nav {
+                display: flex;
+                justify-content: space-evenly;
+                margin: 5% 0;
+                /*padding-bottom: 2%;*/
+                border-bottom: solid 2px var(--light-gray);
+            }
+
+            .pj-nav-links.active {
+                border-bottom: solid 2px var(--dark-red);
+            }
+            .pj-nav-links:hover {
+                text-decoration: none;
+                
+            }
+
+            .project-page {
+                width: 80%;
+                margin: 0 auto;
+            }
+
+            .program {
+                display: flex;
+                background: var(--tinted-white);
+                margin: 3% 0;
+                box-shadow: 0 0 10px 1px var(--light-gray);
+            }
+
+            .program-img {
+                width: 30%;
+                aspect-ratio: 1 / 1;
+            }
+
+        </style>
+        
+    </head>
+    <body>
+        
+        <!-- Header -->
+        <div class="header">
+            <img class="logo head-img" alt="THF Logo" src="https://www.khanacademy.org/computer-programming/logo-for-the-hotlist-forge/6684910475984896/4571416192532480.png">
+            
+            <div class="nav">
+                <a class="nav-link active" href="javascript:page(0);" >Home</a>
+                <a class="nav-link" href="javascript:page(1);">About</a>
+                <a class="nav-link" href="javascript:page(2);">Team</a>
+                <a class="nav-link" href="javascript:page(3);">Projects</a>
+            </div>
+            
+            <button class="btn1">Subscribe</button>
+            
+        </div>
+        
+        <!-- Home(0) -->
+        <div class="page">
+            
+            <!-- Hero -->
+            <div class="hero">
+                <div class="main-hero-text">
+                    <h1 class="hero-title">The Hotlist Forge</h1>
+                    <p>Forging the HotList, one program at a time.</p>
+                
+                    <button class="btn1" onclick="javascript:page(2);">View</button>
+                    <button class="btn2">Sub</button>
+                
+                </div>
+                
+                <div class="hero-bottom">
+                    <div class="hero-img hero-card"></div>
+                    <div class="hero-card" id="stat1">
+                        <h2>Ace Rogers</h2>
+                        <p>CEO</p>
+                    </div>
+                    <div class="hero-card" id="stat2">
+                        <h2>21+</h2>
+                        <p>Programs created</p>
+                    </div>
+                    <div class="hero-card" id="stat3">
+                        <h2>3 Years</h2>
+                        <p>Of running on KA.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Currently Working -->
+            <div class="content-section" style="background:var(--medium-red); display:flex;">
+                
+                <div class="scrollE u">
+                    <h2>When do we work?</h2>
+                    <p>We usually start releasing porgrams around late september of each year. Maybe you will soon see some of our work!</p>
+                    <button class="btn3">View Programs</button>
+                </div>
+                
+                <img class="section-img" src="https://upload.wikimedia.org/wikipedia/commons/3/3d/CSS_code_on_a_screen_%28Unsplash%29.jpg">
+            </div>
+            
+            <!-- Disclaimer -->
+            <div class="content-section">
+                <div class="disclaimer scrollE r">
+                    <strong>Disclaimer: No volunteers accepted. Members join via personal invitation.</strong>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- About(1) -->
+        <div class="page content-section">
+
+            <h1>About THF</h1>
+
+            <p class="scrollE u">The Hotlist Forge is a team founded by <a href="https://www.khanacademy.org/profile/doughnuts12">The Marvelous Cracker</a> but was handed over to <a href="https://www.khanacademy.org/profile/AmericanGuard">Ace Rogers</a> due to The Marvelous Cracker not being active enough to do it in the subsequent years.</p>
+
+            <p class="scrollE u">In 2023 The Marvelous Cracker, or TMC, got together seven good but inactive or semi-active coders that would each make one program. After everyone was finished, they each released their program on one of the days of the week so that there would be one high-quality program on the hotlist each day for one week.</p>
+
+            <p class="scrollE u">From 2024 onwards, Ace Rogers is going to manage it and keep to TMC's original idea. He created the <a href="https://www.khanacademy.org/computer-programming/thf/6073870722711552">original homepage</a> to keep track of each years participants and projects. He also created the organization's logo (Top left). In 2025 the homepage was revamped by <a href="https://www.khanacademy.org/profile/SnowFalcon/">Washington</a>.</p>
+        </div>
+
+        <!-- Teams(2) -->
+        <div class="page" id="teams"></div>
+
+        <!-- Projects(3) -->
+        <div class="page">
+
+            
+
+            <!-- Projects nav -->
+            <div class="content-section">
+                <h1 style="text-align: center;">Filter projects by year</h1>
+                <div class="pj-nav">
+                    <a href="javascript:pjPage(0);" class="pj-nav-links">2023</a>
+                    <a href="javascript:pjPage(1);" class="pj-nav-links">2024</a>
+                    <a href="javascript:pjPage(2);" class="pj-nav-links active">2025</a>
+                </div>
+            </div>
+
+            <!-- Projects from 2023 -->
+            <div class="project-page" id="pj2023"></div>
+
+            <!-- Projects from 2024 -->
+            <div class="project-page" id="pj2024"></div>
+
+            <!-- Projects from 2025 -->
+            <div class="project-page" id="pj2025"></div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            
+            <!-- Top part -->
+            <div class="foot-upper">
+                <img class="logo foot-img" alt="THF Logo" src="https://www.khanacademy.org/computer-programming/logo-for-the-hotlist-forge/6684910475984896/4571416192532480.png">
+                
+                <div class="foot-section">
+                    <h3>Pages</h3>
+                    <a class = "foot-links" href="javascript:page(0);" >Home</a><br>
+                    <a class = "foot-links" href="javascript:page(1);">About</a><br>
+                    <a class = "foot-links" href="javascript:page(2);">Team</a><br>
+                    <a class = "foot-links" href="javascript:page(3);">Projects</a><br>
+                </div>
+                
+                <div class="foot-section">
+                    <h3>Contact</h3>
+                    <a class = "foot-links" href="https://www.khanacademy.org/profile/kaid_714276242204949021450419/">Ace Rogers</a>
+                    
+                </div>
+            </div>
+            
+            <!-- Bottom part -->
+            <div class="foot-bottom">
+                <p style="font-size:12px;">&copy; 2025 Washington, all rights reserved</p>
+                
+                
+            </div>
+            
+            
+        </div>
+        
+        
+        
+        <!-- Databases -->
+        <script>
+            
+            var programmers = [
+                
+              {
+                team: "2025",
+                name: "Ace Rogers",
+                user: "@AmericanGuard",
+                avatar: "https://cdn.kastatic.org/images/avatars/svg/leaf-blue.svg",
+                bio: "Ace Rogers was inactive but has come back to make something for The Hotlist Forge. Let's see if he still has his skills even though he was inactive for a few months.",
+                bioAuthor: "Ace Rogers",
+                date: "July 7th, 2025"
+              },
+              {
+                team: "2025",
+                name: "Duke",
+                user: "@duke.ka",
+                avatar: "https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/avatars/starky-ultimate.png",
+                bio: "A really good friend and is becoming a great coder. Duke has made many amazing projects. This year, Duke is taking the main lead with The Hotlist Forge.",
+                bioAuthor: "Ace Rogers",
+                date: "September 21st, 2025"
+              },
+              {
+                team: "2025",
+                name: "Avenger",
+                user: "@SavedChild",
+                avatar: "https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/avatars/leaf-blue.png",
+                bio: "I have watch them as they went on their coding journey, and they've gone a long way. They have made so really cool games and their graphic skills are very impressive.",
+                bioAuthor: "Ace Rogers",
+                date: "September 21st, 2025"
+              },
+              {
+                team: "2025",
+                name: "Ibraheem Ahmed (IA)",
+                user: "@IbraheemIA",
+                avatar: "https://cdn.kastatic.org/images/avatars/svg/spunky-sam.svg",
+                bio: "IA is (in my opinion) a legend coder. He has made a lot of cool games and other projects. All his projects are nicely designed. Will his skills, Ace is excited to see what he makes.",
+                bioAuthor: "Ace Rogers",
+                date: "July 7th, 2025"
+              },
+              {
+                team: "2025",
+                name: "GalexyRanger",
+                user: "@CedricMCA",
+                avatar: "https://cdn.kastatic.org/images/avatars/svg/boggle-blue.svg",
+                bio: "A famous coder that I've always admired. They are really great at both game development and graphic designing. I have always looked at him as being a legendary coder.",
+                bioAuthor: "Ace Rogers",
+                date: "September 21st, 2025"
+              },
+              {
+                team: "2025",
+                name: "Quantum Cat",
+                user: "@JadePanther",
+                avatar: "https://cdn.kastatic.org/images/avatars/svg/stelly-yellow.svg",
+                bio: "They are also a really good game developer and graphic designer and they've made a lot of interesting things.",
+                bioAuthor: "Ace Rogers",
+                date: "September 21st, 2025"
+              },
+              {
+                team: "2025",
+                name: "Arwen",
+                user: "@KittenLove73",
+                avatar: "https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/avatars/duskpin-sapling.png",
+                bio: "Although they don't have many programs, they are a very good graphic designer. And I'm trying to bring them out of inactivity.",
+                bioAuthor: "Ace Rogers",
+                date: "September 21st, 2025"
+              },
+              {
+                team: "2024",
+                name: "Ace Rogers",
+                user: "@AmericanGuard",
+                avatar: "https://cdn.kastatic.org/images/avatars/svg/leaf-blue.svg",
+                bio: "Ace Rogers is an expert graphic designer and animator and he's working towards making big games and webpages. He's now manager of The Hotlist Forge.",
+                bioAuthor: "Ace Rogers",
+                date: "July 1st, 2024"
+                },
+                {
+                team: "2024",
+                name: "Synapse",
+                user: "@Synapse1.0",
+                avatar: "https://cdn.kastatic.org/images/avatars/svg/boggle-green.svg",
+                bio: "Synapse is an expert pixel artist, graphic designer, animator and game developer that has made amazing projects.",
+                bioAuthor: "Ace Rogers",
+                date: "July 2nd, 2024"
+                },
+                {
+                team: "2024",
+                name: "marci",
+                user: "@marcistudios",
+                avatar: "https://cdn.kastatic.org/images/avatars/svg/leafers-seedling.svg",
+                bio: "marci is a really skilled graphic designer who has recently come out of inactivity. She has made many cute and beautiful graphics in the past and will (hopefully) make many more!",
+                bioAuthor: "Ace Rogers",
+                date: "July 6th, 2024"
+                },
+                {
+                team: "2024",
+                name: "LeaferStudios",
+                user: "@LeaferStudios",
+                avatar: "https://cdn.kastatic.org/images/avatars/svg/leafers-ultimate.svg",
+                bio: "LeaferStudios is a legendary coder who makes really high-quality webpages and games! \"I'm expecting something with 15,000+ lines of code from you.\" Jokes Ace Rogers.",
+                bioAuthor: "Ace Rogers",
+                date: "July 8th, 2024"
+                },
+                {
+                team: "2024",
+                name: "Liam K.",
+                user: "@liamk.ka",
+                avatar: "https://cdn.kastatic.org/images/avatars/svg/duskpin-ultimate.svg",
+                bio: "Liam K. is the host of three big coding competitions and has made over 50 outstanding projects with votes that range from 300 to 900!",
+                bioAuthor: "",
+                date: ""
+                },
+                {
+                team: "2024",
+                name: "F4stB01",
+                user: "@f4stb01",
+                avatar: "https://cdn.kastatic.org/images/avatars/svg/cs-hopper-cool.svg",
+                bio: "F4stB01 is one of the greatest graphic designers that has made many really realistic graphics, which are mostly planet and outerspace themed, and look really cool!",
+                bioAuthor: "",
+                date: ""
+                },
+                {
+                team: "2024",
+                name: "Levi F.",
+                user: "@LeviCoder",
+                avatar: "https://cdn.kastatic.org/images/avatars/svg/area-52-yellow.svg",
+                bio: "Levi F. is a great game developer and graphic designer and has made many super cool games that are really fun to play.",
+                bioAuthor: "",
+                date: ""
+                },
+                {
+                team: "2023",
+                name: "The Marvelous Cracker",
+                user: "@doughnuts12",
+                avatar: "https://cdn.kastatic.org/images/avatars/svg/aqualine-tree.svg",
+                bio: "The Marvelous Cracker (TMC) is a great graphic designer and is the founder of The Hotlist Forge but handed the management over to Ace Rogers due to inactivity.",
+                bioAuthor: "Ace Rogers",
+                date: "July 1st, 2024"
+                },
+                {
+                team: "2023",
+                name: "Captain Longtreader",
+                user: "@ThornSeaclaw",
+                avatar: "https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/avatars/starky-ultimate.png",
+                bio: "Captain Longtreader is an excellent game developer and graphic designer who has made over 20 awesome games!",
+                bioAuthor: "Ace Rogers",
+                date: "July 1st, 2024"
+                },
+                {
+                team: "2023",
+                name: "Birdwatcher14",
+                user: "@Birdwatcher14",
+                avatar: "https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/avatars/leaf-yellow.png",
+                bio: "Birdwatcher14 is a great graphic designer who has made many great graphics! Though they haven't made any new projects since last year when they made something for The Hotlist Forge.",
+                bioAuthor: "Ace Rogers",
+                date: "July 1st, 2024"
+                },
+                {
+                team: "2023",
+                name: "Ace Rogers",
+                user: "@AmericanGuard",
+                avatar: "https://cdn.kastatic.org/images/avatars/svg/leaf-blue.svg",
+                bio: "Ace Rogers was a pretty good graphic designer when he joined this. And last year was the year that he learned how to use masking which greatly improved his graphic skills!",
+                bioAuthor: "Ace Rogers",
+                date: "July 1st, 2024"
+                },
+                {
+                team: "2023",
+                name: "CoraL",
+                user: "@CoraLFernsby",
+                avatar: "https://cdn.kastatic.org/images/avatars/svg/sneak-peak-purple.svg",
+                bio: "An outstanding web developer who has made many clean and well designed webpages for all of Khan Academy to enjoy.",
+                bioAuthor: "Ace Rogers",
+                date: "July 1st, 2024"
+                },
+                {
+                team: "2023",
+                name: "Cavan P",
+                user: "@LoyaltyKa",
+                avatar: "https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/avatars/leaf-red.png",
+                bio: "Cavan P is amazing at both graphic designing and game developing. He is also a Khan Academy guardian and a challenge council member.",
+                bioAuthor: "Ace Rogers",
+                date: "July 1st, 2024"
+                },
+                {
+                team: "2023",
+                name: "Cedar",
+                user: "@PossumTheAwesome",
+                avatar: "https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/avatars/marcimus.png",
+                bio: "I can't say too much about Cedar since they don't have a lot on their profile. But they made a cool webpage about snakes!",
+                bioAuthor: "Ace Rogers",
+                date: "July 1st, 2024"
+                }
+            ];
+            
+            var programs = [
+                {
+                    name: "Shape Tool [0.9]",
+                    author: "Ace Rogers",
+                    link: "https://www.khanacademy.org/computer-programming/shape-tool-09-thf/5494695009894400",
+                    year: "pj2024"
+                },
+                {
+                    name: "The Feast of the Dragonfly",
+                    author: "Ace Rogers and Duke",
+                    link: "https://www.khanacademy.org/computer-programming/the-feast-of-the-dragonfly-thf/5814235201716224",
+                    year: "pj2024"
+                },
+                {
+                    name: "Peaceful Studying",
+                    author: "marci",
+                    link: "https://www.khanacademy.org/computer-programming/peaceful-studying-the-hotlist-forge/6645258246340608",
+                    year: "pj2024"
+                },
+                {
+                    name: "KhanBot v2",
+                    author: "LeaferStudios",
+                    link: "https://www.khanacademy.org/computer-programming/khanbot-v2/5837126102335488",
+                    year: "pj2024"
+                },
+                {
+                    name: "STARFLEET",
+                    author: "Liam K.",
+                    link: "https://www.khanacademy.org/computer-programming/starfleet-thf/5890582741696512",
+                    year: "pj2024"
+                },
+                {
+                    name: "it's a ghost",
+                    author: "F4stB01",
+                    link: "https://www.khanacademy.org/computer-programming/its-a-ghost/4778671549628416",
+                    year: "pj2024"
+                },
+                {
+                    name: "unnamed game",
+                    author: "Levi F.",
+                    link: "https://www.khanacademy.org/computer-programming/unnamed-game-for-the-hotlist-forge/5665590215098368",
+                    year: "pj2024"
+                },
+                
+                {
+                    name: "YOU FOUGHT IN THE CLONE WARS!?!?!?!?",
+                    author: "The Marvelous Cracker",
+                    link: "https://www.khanacademy.org/computer-programming/you-fought-in-the-clone-wars/6208583806795776",
+                    year: "pj2023"
+                },
+                {
+                    name: "Sierpinski Triangle with Recursion",
+                    author: "The Marvelous Cracker",
+                    link: "https://www.khanacademy.org/computer-programming/sierpinski-triangle-with-recursion/5150337792786432",
+                    year: "pj2023"
+                },
+                {
+                    name: "AVATAR WAR II",
+                    author: "Captain Longtreader",
+                    link: "https://www.khanacademy.org/computer-programming/avatar-war-ii/5594832883728384",
+                    year: "pj2023"
+                },
+                {
+                    name: "Danger Zone | Full Game",
+                    author: "Captain Longtreader",
+                    link: "https://www.khanacademy.org/computer-programming/danger-zone-full-game/4637965630095360",
+                    year: "pj2023"
+                },
+                {
+                    name: "Me",
+                    author: "Birdwatcher14",
+                    link: "https://www.khanacademy.org/computer-programming/me/4828416974831616",
+                    year: "pj2023"
+                },
+                {
+                    name: "Spider-Man: No Way Home",
+                    author: "Ace Rogers",
+                    link: "https://www.khanacademy.org/computer-programming/spider-man-no-way-home/4812187602042880",
+                    year: "pj2023"
+                },
+                {
+                    name: "The Programmer's Quiz [OLD]",
+                    author: "CoraL",
+                    link: "https://www.khanacademy.org/computer-programming/the-programmers-quiz-old/5324397868793856",
+                    year: "pj2023"
+                },
+                {
+                    name: "Can Chess, with Hexagons?",
+                    author: "Cavan P",
+                    link: "https://www.khanacademy.org/computer-programming/can-chess-with-hexagons/5603434491068416",
+                    year: "pj2023"
+                },
+                {
+                    name: "About Snakes FIRST DRAFT",
+                    author: "Cedar",
+                    link: "https://www.khanacademy.org/computer-programming/about-snakes-first-draft/6708314365542400",
+                    year: "pj2023"
+                },
+                {
+                    name: "Mission Delta",
+                    author: "Duke",
+                    link: "https://www.khanacademy.org/computer-programming/new-program/4745873322524672",
+                    year: "pj2025"
+                },
+                {
+                    name: "Lego Brawls",
+                    author: "Avenger",
+                    link: "https://www.khanacademy.org/computer-programming/i/5254136497553408",
+                    year: "pj2025"
+                },
+                {
+                    name: "Peaceful Music of Nature",
+                    author: "Ace Rogers",
+                    link: "https://www.khanacademy.org/computer-programming/peaceful-music-of-nature/5934697620815872",
+                    year: "pj2025"
+                },
+                {
+                    name: "Playful Puppy",
+                    author: "Ace Rogers",
+                    link: "https://www.khanacademy.org/computer-programming/playful-puppy/6754175648645120",
+                    year: "pj2025"
+                },
+                {
+                    name: "Reckless Racer 3D Beta",
+                    author: "Galaxy Ranger",
+                    link: "https://www.khanacademy.org/computer-programming/reckless-racer-3d-beta-thf/6389186362458112",
+                    year: "pj2025"
+                },
+                {
+                    name: "Joan of Arc",
+                    author: "Arwen",
+                    link: "https://www.khanacademy.org/computer-programming/joan-of-arc/4891186406473728",
+                    year: "pj2025"
+                },
+                {
+                    name: "Tower of Time",
+                    author: "Quantum Cat",
+                    link: "https://www.khanacademy.org/computer-programming/tower-of-time-thfgame/5222466763472896",
+                    year: "pj2025"
+                },
+                {
+                    name: "Blue 2",
+                    author: "Ibraheem Ahmed",
+                    link: "https://www.khanacademy.org/computer-programming/blue-2-platformer/5229007159803904",
+                    year: "pj2025"
+                }
+
+
+
+            ];
+            
+        </script>
+
+        <!-- Main app script -->
+        <script type>
+
+            //page switching
+            var pages = document.getElementsByClassName("page");
+            var links = document.getElementsByClassName("nav-link");
+            function page (index) {
+                
+                //Hiding all pages
+                for (var i = 0; i < pages.length; i++) {
+                    pages[i].style.display = "none";
+                }
+                
+                //Displaying page
+                pages[index].style.animation = "2s fade-in forwards"; 
+                pages[index].style.display = "block";
+                
+                //scrolling to top
+                window.scroll({top:0,behavior:"smooth"});
+                
+                
+                //Making all nav links inactive
+                for (var i = 0; i < links.length; i++) {
+                    links[i].classList.remove("active");
+                }
+                
+                //Adding class to nav-link
+                links[index].classList.add("active");
+                
+            };
+            page(0);
+
+            //project page
+            var pjpages = document.querySelectorAll(".project-page");
+            var pjlinks = document.querySelectorAll(".pj-nav-links");
+            function pjPage (index) {
+
+                //Hiding all pages
+                for (var i = 0; i < pjpages.length; i++) {
+                    pjpages[i].style.display = "none";
+                }
+                
+                //Displaying page
+                pjpages[index].style.display = "block";
+                pjpages[index].style.animation = "2s fade-in forwards"; 
+                
+                //scrolling to top
+                window.scroll({top:0,behavior:"smooth"});
+                
+                
+                //Making all nav links inactive
+                for (var i = 0; i < pjlinks.length; i++) {
+                    pjlinks[i].classList.remove("active");
+                }
+                
+                //Adding class to nav-link
+                pjlinks[index].classList.add("active");
+
+            }
+            pjPage(2);
+
+            //swiping on team carousel
+            function swipeRight(car) {
+                document.getElementById(car).querySelector(".team-container").scrollBy({ left: 300, behavior: 'smooth' });
+            }
+            function swipeLeft(car) {
+                document.getElementById(car).querySelector(".team-container").scrollBy({ left: -300, behavior: 'smooth' });
+            }
+            
+            //Adding members
+            function addMember(data, car) {
+                var card = document.createElement("div");
+                card.classList.add("member-card");
+                
+                card.innerHTML = `
+                    <h3>${data.name}</h3>
+                    <img src="${data.avatar}" alt="logo" class="member-avatar">
+                    <p class="member-subtext">${data.user}</p>
+                    <p>${data.bio}
+                        <em>~${data.bioAuthor}, ${data.date}</em>
+                    </p>
+                    `;
+                    
+                car.appendChild(card);
+            }
+            
+            //adding carousel
+            function addCarousel(data, section) {
+                var car = document.createElement("div");
+                car.classList.add("team-container");
+                
+                data.forEach(member => {
+                    addMember(member, car);
+                });
+                
+                section.appendChild(car);
+                
+            }
+            
+            //adding team section
+            function addTeam(data, id) {
+                
+                var team = document.createElement("div");
+                team.classList.add("content-section");
+                team.id = "yr"+id;
+                
+                team.innerHTML += `<h2>Team of ${id}</h2>`;
+                
+                addCarousel(data, team);
+                
+                var leftBtn = document.createElement('button');
+                leftBtn.className = 'btn2';
+                leftBtn.innerHTML = '&larr;';
+                leftBtn.addEventListener('click', () => swipeLeft(team.id));
+
+                var rightBtn = document.createElement('button');
+                rightBtn.className = 'btn2';
+                rightBtn.innerHTML = '&rarr;';
+                rightBtn.style.float = "right";
+                rightBtn.addEventListener('click', () => swipeRight(team.id));
+
+                team.appendChild(leftBtn);
+                team.appendChild(rightBtn);
+
+                
+                document.querySelector("#teams").appendChild(team);
+                
+            }
+            
+            //Create teams based on programmers database
+            var dividedTeams = {};
+            programmers.forEach(pro => {
+                
+                if(pro.team in dividedTeams) {
+                    dividedTeams[pro.team].push(pro);
+                }
+                else {
+                    dividedTeams[pro.team] = [pro];
+                }
+                
+            });
+            for (var i = Object.keys(dividedTeams).length-1; i >= 0; i--) {
+                var team = Object.keys(dividedTeams)[i];
+                addTeam(dividedTeams[team], team)
+            }
+            
+            //Add project to appropiate page
+            function addProgram(data) {
+                var pro = document.createElement("div");
+                pro.classList.add("program");
+                pro.innerHTML = `
+                <img src="${data.link}/latest.png" alt="program thumbnail" class="program-img">
+                <div class="program-text">
+                    <a href="${data.link}"><h3>${data.name}</h3></a>
+                    <p>By ${data.author}</p>
+                </div>`;
+
+                document.getElementById(data.year).appendChild(pro);
+            }
+
+            programs.forEach(program => addProgram(program));
+            
+
+        </script>
+
+        <!-- Scroll Animations API -->
+        <script type>
+            
+            //callback function for elements intersecting the viewport
+            const callback = (entries) => {
+                entries.forEach((entry) => {
+                    if(entry.isIntersecting) {
+                        entry.target.classList.add("scrolled");
+                        
+                    }
+                    else {
+                        entry.target.classList.remove("scrolled");
+                    }
+                });
+            };
+            
+            //options for observer API
+            const options = {
+              root: null,
+              rootMargin: "0px",
+              threshold: 0.2,
+            };
+            
+            //the observer
+            const observer = new IntersectionObserver(callback, options);
+            
+            //observing scrollEls
+            let scrollEls = document.getElementsByClassName("scrollE");
+            
+            Array.from(scrollEls).forEach(el => observer.observe(el));
+            
+            
+        </script>
+        
+        <!-- The Thumbnail Script 2.0.0 10/24/2023 by @Bluebird -->
+        <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+        <script type>
+        var r = 600; 
+        var s = document.documentElement.clientWidth;
+        window.parent.html2canvas = e => {
+            try {
+                html2canvas(document.body, {
+                    width:   s,
+                    height:  s,
+                    useCORS: true,
+                }).then(e => {
+                    var c = document.createElement("canvas");
+                    c.width  = r;
+                    c.height = r;
+                    c.getContext('2d').drawImage(e, 0, 0, e.width, e.height, 0, 0, r, r);
+                    window.top.postMessage(c.toDataURL(), "*");
+                }).catch(e => { 
+                    alert("Thumbnail Script Error: " + e);  
+                });
+            } catch {
+                window.top.postMessage(document.createElement("canvas").toDataURL(), "*");
+            }
+        }; 
+    </script>   
+        
+
+    </body>
+</html>
