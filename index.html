@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>WIP for THF</title>
+        
+        <!-- Importing Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+        
+        <!-- Material icons -->
+       <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:FILL@1" rel="stylesheet" />
+       
+        <!-- Main Stylesheet -->
+        <link rel="stylesheet" href="styles.css">
+        
+    </head>
+    <body>
+        
+        <!-- Header -->
+        <div class="header">
+            <img class="logo head-img" alt="THF Logo" src="https://www.khanacademy.org/computer-programming/logo-for-the-hotlist-forge/6684910475984896/4571416192532480.png">
+            
+            <div class="nav">
+                <a class="nav-link active" href="javascript:page(0);" >Home</a>
+                <a class="nav-link" href="javascript:page(1);">About</a>
+                <a class="nav-link" href="javascript:page(2);">Team</a>
+                <a class="nav-link" href="javascript:page(3);">Projects</a>
+            </div>
+            
+            <button class="btn1">Subscribe</button>
+            
+        </div>
+        
+        <!-- Home(0) -->
+        <div class="page">
+            
+            <!-- Hero -->
+            <div class="hero">
+                <div class="main-hero-text">
+                    <h1 class="hero-title">The Hotlist Forge</h1>
+                    <p>Forging the HotList, one program at a time.</p>
+                
+                    <button class="btn1" onclick="javascript:page(2);">View</button>
+                    <button class="btn2">Sub</button>
+                
+                </div>
+                
+                <div class="hero-bottom">
+                    <div class="hero-img hero-card"></div>
+                    <div class="hero-card" id="stat1">
+                        <h2>Ace Rogers</h2>
+                        <p>CEO</p>
+                    </div>
+                    <div class="hero-card" id="stat2">
+                        <h2>21+</h2>
+                        <p>Programs created</p>
+                    </div>
+                    <div class="hero-card" id="stat3">
+                        <h2>3 Years</h2>
+                        <p>Of running on KA.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Currently Working -->
+            <div class="content-section" style="background:var(--medium-red); display:flex;">
+                
+                <div class="scrollE u">
+                    <h2>When do we work?</h2>
+                    <p>We usually start releasing porgrams around late september of each year. Maybe you will soon see some of our work!</p>
+                    <button class="btn3">View Programs</button>
+                </div>
+                
+                <img class="section-img" src="https://upload.wikimedia.org/wikipedia/commons/3/3d/CSS_code_on_a_screen_%28Unsplash%29.jpg">
+            </div>
+            
+            <!-- Disclaimer -->
+            <div class="content-section">
+                <div class="disclaimer scrollE r">
+                    <strong>Disclaimer: No volunteers accepted. Members join via personal invitation.</strong>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- About(1) -->
+        <div class="page content-section">
+
+            <h1>About THF</h1>
+
+            <p class="scrollE u">The Hotlist Forge is a team founded by <a href="https://www.khanacademy.org/profile/doughnuts12">The Marvelous Cracker</a> but was handed over to <a href="https://www.khanacademy.org/profile/AmericanGuard">Ace Rogers</a> due to The Marvelous Cracker not being active enough to do it in the subsequent years.</p>
+
+            <p class="scrollE u">In 2023 The Marvelous Cracker, or TMC, got together seven good but inactive or semi-active coders that would each make one program. After everyone was finished, they each released their program on one of the days of the week so that there would be one high-quality program on the hotlist each day for one week.</p>
+
+            <p class="scrollE u">From 2024 onwards, Ace Rogers is going to manage it and keep to TMC's original idea. He created the <a href="https://www.khanacademy.org/computer-programming/thf/6073870722711552">original homepage</a> to keep track of each years participants and projects. He also created the organization's logo (Top left). In 2025 the homepage was revamped by <a href="https://www.khanacademy.org/profile/SnowFalcon/">Washington</a>.</p>
+        </div>
+
+        <!-- Teams(2) -->
+        <div class="page" id="teams"></div>
+
+        <!-- Projects(3) -->
+        <div class="page">
+
+            
+
+            <!-- Projects nav -->
+            <div class="content-section">
+                <h1 style="text-align: center;">Filter projects by year</h1>
+                <div class="pj-nav">
+                    <a href="javascript:pjPage(0);" class="pj-nav-links">2023</a>
+                    <a href="javascript:pjPage(1);" class="pj-nav-links">2024</a>
+                    <a href="javascript:pjPage(2);" class="pj-nav-links active">2025</a>
+                </div>
+            </div>
+
+            <!-- Projects from 2023 -->
+            <div class="project-page" id="pj2023"></div>
+
+            <!-- Projects from 2024 -->
+            <div class="project-page" id="pj2024"></div>
+
+            <!-- Projects from 2025 -->
+            <div class="project-page" id="pj2025"></div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            
+            <!-- Top part -->
+            <div class="foot-upper">
+                <img class="logo foot-img" alt="THF Logo" src="https://www.khanacademy.org/computer-programming/logo-for-the-hotlist-forge/6684910475984896/4571416192532480.png">
+                
+                <div class="foot-section">
+                    <h3>Pages</h3>
+                    <a class = "foot-links" href="javascript:page(0);" >Home</a><br>
+                    <a class = "foot-links" href="javascript:page(1);">About</a><br>
+                    <a class = "foot-links" href="javascript:page(2);">Team</a><br>
+                    <a class = "foot-links" href="javascript:page(3);">Projects</a><br>
+                </div>
+                
+                <div class="foot-section">
+                    <h3>Contact</h3>
+                    <a class = "foot-links" href="https://www.khanacademy.org/profile/kaid_714276242204949021450419/">Ace Rogers</a>
+                    
+                </div>
+            </div>
+            
+            <!-- Bottom part -->
+            <div class="foot-bottom">
+                <p style="font-size:12px;">&copy; 2025 Washington, all rights reserved</p>
+                
+                
+            </div>
+            
+            
+        </div>
+        
+        
+        <!-- Databases -->
+        <script src="Databases.js"></script>
+        
+        <!-- Main App Script -->
+        <script type="module" src="Main App Script.js"></script>
+
+        <!-- Scroll Animations API -->
+        <script src="Scroll Anims API.js"></script>
+        
+
+    </body>
+</html>
