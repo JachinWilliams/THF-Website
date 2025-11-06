@@ -21,13 +21,14 @@
             <img class="logo head-img" alt="THF Logo" src="https://www.khanacademy.org/computer-programming/logo-for-the-hotlist-forge/6684910475984896/4571416192532480.png">
             
             <div class="nav">
-                <a class="nav-link active" href="javascript:page(0);" >Home</a>
-                <a class="nav-link" href="javascript:page(1);">About</a>
-                <a class="nav-link" href="javascript:page(2);">Team</a>
-                <a class="nav-link" href="javascript:page(3);">Projects</a>
+                <a class="nav-link active" data-page="0" href="#">Home</a>
+                <a class="nav-link" data-page="1" href="#">About</a>
+                <a class="nav-link" data-page="2" href="#">Team</a>
+                <a class="nav-link" data-page="3" href="#">Projects</a>
+
             </div>
             
-            <button class="btn1">Subscribe</button>
+            <button class="btn1" onclick="alert('Sorry! This does not work right now.')">Subscribe</button>
             
         </div>
         
@@ -40,15 +41,15 @@
                     <h1 class="hero-title">The Hotlist Forge</h1>
                     <p>Forging the HotList, one program at a time.</p>
                 
-                    <button class="btn1" onclick="javascript:page(2);">View</button>
-                    <button class="btn2">Sub</button>
+                    <button class="btn1 page-switcher" data-page="2">View</button>
+                    <button class="btn2" onclick="alert('Sorry! This does not work right now.')">Sub</button>
                 
                 </div>
                 
                 <div class="hero-bottom">
                     <div class="hero-img hero-card"></div>
                     <div class="hero-card" id="stat1">
-                        <h2>Ace Rogers</h2>
+                        <h2>John Doe</h2>
                         <p>CEO</p>
                     </div>
                     <div class="hero-card" id="stat2">
@@ -68,16 +69,16 @@
                 <div class="scrollE u">
                     <h2>When do we work?</h2>
                     <p>We usually start releasing porgrams around late september of each year. Maybe you will soon see some of our work!</p>
-                    <button class="btn3">View Programs</button>
+                    <button class="btn3 page-switcher" data-page="3">View Programs</button>
                 </div>
                 
-                <img class="section-img" src="https://upload.wikimedia.org/wikipedia/commons/3/3d/CSS_code_on_a_screen_%28Unsplash%29.jpg">
+                <img class="section-img" alt="Code on a pc" src="https://upload.wikimedia.org/wikipedia/commons/3/3d/CSS_code_on_a_screen_%28Unsplash%29.jpg">
             </div>
             
             <!-- Disclaimer -->
             <div class="content-section">
                 <div class="disclaimer scrollE r">
-                    <strong>Disclaimer: No volunteers accepted. Members join via personal invitation.</strong>
+                    <strong>NOTE: All names in this website have been replaced for privacy reasons.</strong>
                 </div>
             </div>
             
@@ -88,11 +89,11 @@
 
             <h1>About THF</h1>
 
-            <p class="scrollE u">The Hotlist Forge is a team founded by <a href="https://www.khanacademy.org/profile/doughnuts12">The Marvelous Cracker</a> but was handed over to <a href="https://www.khanacademy.org/profile/AmericanGuard">Ace Rogers</a> due to The Marvelous Cracker not being active enough to do it in the subsequent years.</p>
+            <p class="scrollE u">The Hotlist Forge is a team founded by <a href="#">Leo Stride</a> but was handed over to <a href="#">John Doe</a> due to Leo Stride not being active enough to do it in the subsequent years.</p>
 
-            <p class="scrollE u">In 2023 The Marvelous Cracker, or TMC, got together seven good but inactive or semi-active coders that would each make one program. After everyone was finished, they each released their program on one of the days of the week so that there would be one high-quality program on the hotlist each day for one week.</p>
+            <p class="scrollE u">In 2023 Leo Stride, or LS, got together seven good but inactive or semi-active coders that would each make one program. After everyone was finished, they each released their program on one of the days of the week so that there would be one high-quality program on the hotlist each day for one week.</p>
 
-            <p class="scrollE u">From 2024 onwards, Ace Rogers is going to manage it and keep to TMC's original idea. He created the <a href="https://www.khanacademy.org/computer-programming/thf/6073870722711552">original homepage</a> to keep track of each years participants and projects. He also created the organization's logo (Top left). In 2025 the homepage was revamped by <a href="https://www.khanacademy.org/profile/SnowFalcon/">Washington</a>.</p>
+            <p class="scrollE u">From 2024 onwards, John Doe is going to manage it and keep to LS' original idea. He created the original homepage to keep track of each years participants and projects. He also created the organization's logo (Top left). In 2025 the homepage was revamped by <a href="https://www.khanacademy.org/profile/SnowFalcon/">Jachin Williams</a>.</p>
         </div>
 
         <!-- Teams(2) -->
@@ -107,9 +108,9 @@
             <div class="content-section">
                 <h1 style="text-align: center;">Filter projects by year</h1>
                 <div class="pj-nav">
-                    <a href="javascript:pjPage(0);" class="pj-nav-links">2023</a>
-                    <a href="javascript:pjPage(1);" class="pj-nav-links">2024</a>
-                    <a href="javascript:pjPage(2);" class="pj-nav-links active">2025</a>
+                    <a href="#" class="pj-nav-links" data-page="0">2023</a>
+                    <a href="#" class="pj-nav-links" data-page="1">2024</a>
+                    <a href="#" class="pj-nav-links active" data-page="2">2025</a>
                 </div>
             </div>
 
@@ -133,22 +134,23 @@
                 
                 <div class="foot-section">
                     <h3>Pages</h3>
-                    <a class = "foot-links" href="javascript:page(0);" >Home</a><br>
-                    <a class = "foot-links" href="javascript:page(1);">About</a><br>
-                    <a class = "foot-links" href="javascript:page(2);">Team</a><br>
-                    <a class = "foot-links" href="javascript:page(3);">Projects</a><br>
+                    <a class="foot-links" data-page="0" href="#">Home</a><br>
+                    <a class="foot-links" data-page="1" href="#">About</a><br>
+                    <a class="foot-links" data-page="2" href="#">Team</a><br>
+                    <a class="foot-links" data-page="3" href="#">Projects</a><br>
+
                 </div>
                 
                 <div class="foot-section">
                     <h3>Contact</h3>
-                    <a class = "foot-links" href="https://www.khanacademy.org/profile/kaid_714276242204949021450419/">Ace Rogers</a>
+                    <a class = "foot-links" href="#" onclick="alert('Sorry! For privacy reasons this link is not available.')">John Doe</a>
                     
                 </div>
             </div>
             
             <!-- Bottom part -->
             <div class="foot-bottom">
-                <p style="font-size:12px;">&copy; 2025 Washington, all rights reserved</p>
+                <p style="font-size:12px;">&copy; 2025 Jachin Williams, all rights reserved</p>
                 
                 
             </div>
@@ -156,7 +158,7 @@
             
         </div>
         
-        
+
         <!-- Databases -->
         <script src="Databases.js"></script>
         

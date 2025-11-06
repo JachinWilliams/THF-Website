@@ -159,5 +159,38 @@ function addProgram(data) {
 
 programs.forEach(program => addProgram(program));
 
+//Event listeners for buttons and links
+
+//nav links
+document.querySelectorAll(".nav-link").forEach(link => {
+  link.addEventListener("click", event => {
+    event.preventDefault();
+    page(parseInt(link.dataset.page, 10));
+  });
+});
+
+//Footer links
+document.querySelectorAll(".foot-links").forEach(link => {
+    link.addEventListener("click", event => {
+        event.preventDefault(); // Prevent default anchor behavior
+        page(parseInt(link.dataset.page, 10)); // Call your page-switching function
+    });
+});
+
+//Project page links
+document.querySelectorAll(".pj-nav-links").forEach(link => {
+    link.addEventListener("click", event => {
+        event.preventDefault(); // Prevent default anchor behavior
+        pjPage(parseInt(link.dataset.page, 10));
+    });
+});
+
+//Page switching buttons
+document.querySelectorAll(".page-switcher").forEach(btn => {
+    btn.addEventListener("click", () => {
+        page(parseInt(btn.dataset.page, 10))
+    });
+});
+
 
 
