@@ -18,7 +18,7 @@
 body {
     background-color: var(--tinted-white);
     font-family: "Roboto", sans-serif;
-    font-size: min(3vw,18px);
+    font-size: clamp(13px, 3vw,18px);
     overflow-x: hidden;
 }
 
@@ -80,7 +80,7 @@ button:hover {
 }
 
 .section-img {
-    max-width:200px;
+    max-width:50%;
     border-radius:20px;
 }
 
@@ -209,7 +209,7 @@ button:hover {
     width:100%;
     height:50%;
     
-    padding:15%;
+    padding: 5% 0;
     
     text-align:center ;
 
@@ -219,15 +219,22 @@ button:hover {
 .hero-bottom {
     display:flex;
     align-items: flex-end;
+    margin: auto; 
     height:50%;
     width:100%;
+}
+
+.hero-card {
+    margin: 2%;
+    border-radius:12px;
+    width:25%;
+    text-align:center;
 }
 
 .hero-img {
     background-image: url(https://upload.wikimedia.org/wikipedia/commons/3/39/C_Hello_World_Program.png);
     background-size: cover;
     
-    width:20%;
     height: 100%;
     
     border-radius:12px;
@@ -236,13 +243,6 @@ button:hover {
     animation-delay: 0.5s;
     animation-fill-mode: backwards;
 
-}
-
-.hero-card {
-    margin: 2%;
-    border-radius:12px;
-    max-width:25%;
-    text-align:center;
 }
 
 #stat1 {
